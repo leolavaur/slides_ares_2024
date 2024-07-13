@@ -1,0 +1,280 @@
+\documentclass[color,t,presentation,english,aspectratio=141]{beamer}
+
+
+
+\usetheme[
+% insert a header below title showing the sections (short section names) for navigation,
+	%secheader,
+	%
+% insert a header above title showing current chapter ou section 
+	%currentsecheader,
+	%
+% text is in english, default is french
+	%isinenglish,
+	%
+% print outline at beginning section, default is false	
+	outlineabs,
+	%
+% print partner's log: ubl, ccbyncsa, cnrs, subatech, irisa, inserm, lab-sticc, marsouin, ls2n, gepea, ubl, loustic, ifremer
+% TO DO: lego, atol, latim, cominglab, etc.
+	secondlogo=ccbyncsa,
+	%
+% print notes, default is false	
+	%printnotes,
+	%
+% slides per page: 1 (default), 2, 4 --landscape--	
+	slidesparpage=1,
+	%
+% section or chapter in headline, default chapter	
+	sectorchapt=, %section
+	%
+% Add a footline with title and author
+	footline,
+	%
+	]
+{IMTAtlantique}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel} 
+%\usepackage[latin1]{inputenc}
+\usepackage{xspace}
+\usepackage{amssymb}
+%\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{array}%
+\usepackage{fancybox}
+\usepackage{hhline}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows,shapes,decorations}
+\usepackage{xifthen}
+\usepackage{bbm}
+\usepackage[absolute]{textpos}
+
+
+
+\usepackage{pgfpages}
+\usepackage{format-IMT-Atlantique}
+
+
+\setbeamertemplate{section in head/foot shaded}[default][75]
+\setbeamertemplate{section in head/foot shaded}[default][25]
+
+
+
+\title{Classe \LaTeX\, Beamer}
+\subtitle{$\triangleright$ D'après le powerpoint}
+
+
+\author[Philippe Lenca]{
+    Philippe Lenca
+}
+
+\institute[IMT Atlantique]{IMT Atlantique}
+    
+
+\date[2017-2018]{2017-2018}
+
+
+
+\begin{document}
+
+
+
+\titlepageimtatlantique
+
+\tableofcontentsimtatlantique
+
+\section{Remarques}
+\frame{
+    \frametitle{Une V0.2017.03 nécessairement perfectible}
+
+$ $\\
+\textbf{Avertissements}~: voici donc le résultat de quelques heures d'acharnement sur \LaTeX\,, \TeX, Beamer, tikz (outils pour lesquels je ne suis pas expert, je me débrouille\ldots).
+$ $\\
+La classe \LaTeX\, correspondante est donc perfectible (elle \og~colle~\fg{} à la charte graphique pour les transparents format $4/3$, les dimensions, les positions, etc., ayant été estimées à partir des pages imprimées de l'exemple powerpoint).
+
+}
+
+\frame{
+    \frametitle{Installation}
+$ $\\
+Il suffit d'extraire le fichier ZIP dans le répertoire où \LaTeX\, cherche ses packages (\texttt{/usr/share/texmf-texlive/tex/latex/} ou encore \texttt{/usr/share/texmf/tex/latex/}, ou encore un répertoire personnalisé) et de mettre à jour la base de données (commande \texttt{sudo texhash} sous \textsc{linux}, ou encore dans un menu adéquat pour les éditeurs pour \LaTeX).
+$ $\\$ $\\
+Les transparents suivants donnent quelques éléments pour démarrer (le source \LaTeX\, ayant produit ces transparents est également donné). Bonne utilisation de cette classe~!
+
+}
+\section{Les couleurs}
+\frame{
+    \frametitle{En bleu}
+
+    \blockblue{Un bloc bleu foncé basé sur {RGB} {12, 35, 64}}{
+    Le titre est en blanc sur fond bleu foncé. Le fond du corps du bloc est obtenu à partir du bleu clair IMT Atlantique éclairci à 10\% et le texte est en noir.
+    \begin{itemize}
+    \item des puces
+    \item des puces
+    \end{itemize}
+   }
+   \thmblue{Un take home message sur fond bleu foncé}
+}
+
+
+\frame{
+    \frametitle{En gris}
+
+    \blockgray{Un bloc gris basé sur {RGB} {230, 230, 230}}{
+    Du texte.
+    \begin{itemize}
+    \item des puces
+    \item des puces
+    \end{itemize}
+   }
+   \thmgray{Un take home message sur fond gris}
+}
+
+
+\frame{
+    \frametitle{En vert}
+
+    \blockgreen{Un bloc vert basé sur {RGB} {164, 210, 51}}{
+    Et ainsi de suite.
+    \begin{itemize}
+    \item des puces
+    \item des puces
+    \end{itemize}
+   }
+   \thmgreen{Un take home message sur fond vert}
+}
+
+\section{Options}
+\frame{\frametitle{Il y a 5 options à ce jour}
+\ret
+\begin{itemize}
+\item secheader (doit être explicite) : sections header
+\item isinenglish (par défaut french) : is in english
+\item outlineabs (par défaut false) : outline at beginning section
+\item secondlogo=nom logo (par défaut aucun) : second logo
+	%secondlogo=ifremer, %ubl, %ccbyncsa, cnrs, subatech, irisa, inserm, lab-sticc, marsouin, ls2n, gepea, ubl, loustic, ifremer
+	%TO DO:lego, atol, , latim, , cominglab, etc. puis les dimensions
+	%printnotes,				% print notes, default is false
+\item	slidesparpage=number (1 (défaut) --paysage--, 2 --portrait--,  4 --paysage--)
+\item sectorchapt=section$|$chapter (défaut)~: Section ou Chapitre pour les titres
+
+	%
+\end{itemize}
+
+}
+
+\frame{\frametitle{Option \textbf{secheader}}
+\pgfdeclareimage[page=9,height=4cm,width=5cm]{exnosecheader}{tutoclasseIMTA}
+\pgfdeclareimage[page=9,height=4cm,width=5cm]{exsecheader}{secheadertutoclasseIMTA}
+
+L'option \textbf{secheader} insère sous le titre une barre permettant de naviguer entre les sections (les chapitres). Il suffit de cliquer sur le nom (nom court, défini par l'utilisateur) pour atteindre la section correspondante (à gauche). Par défaut sans barre (à droite).
+
+\begin{pgfpicture}{0cm}{0cm}{8cm}{6.0cm}
+\pgfputat{\pgfxy(1,1.5)}{\pgfbox[left,base]{\pgfuseimage{exsecheader}}}
+\pgfputat{\pgfxy(7,1.5)}{\pgfbox[left,base]{\pgfuseimage{exnosecheader}}}
+%\pgfputat{\pgfxy(1,0)}{\pgfbox[left,base]{ insert a header below title showing theIl y a 5 options à ce jour.}}
+\end{pgfpicture}
+
+
+}
+
+\frame{\frametitle{Option \textbf{isinenglish}}
+\pgfdeclareimage[page=9,height=4cm,width=5cm]{exsecheader}{secheadertutoclasseIMTA}
+\pgfdeclareimage[page=9,height=4cm,width=5cm]{isinenglishexsecheader}{isinenglishsecheadertutoclasseIMTA}
+
+L'option \textbf{isinenglish} pour signaler que le texte est en anglais (Chapter, OUTLINE, References, Ref à la place de Chapitre, SOMMAIRE, R{\'e}f{\'e}rences, R{\'e}f~; l'espace avant les deux points dans le titre est également supprimé (à gauche). Par défaut en français (à droite).
+
+
+\begin{pgfpicture}{0cm}{0cm}{8cm}{6.0cm}
+\pgfputat{\pgfxy(1,1)}{\pgfbox[left,base]{\pgfuseimage{isinenglishexsecheader}}}
+\pgfputat{\pgfxy(7,1)}{\pgfbox[left,base]{\pgfuseimage{exsecheader}}}
+
+%\pgfputat{\pgfxy(1,0)}{\pgfbox[left,base]{ insert a header below title showing theIl y a 5 options à ce jour.}}
+\end{pgfpicture}
+
+
+}
+
+\frame{\frametitle{Option \textbf{outlineabs}}
+L'option \textbf{outlineabs} pour insérer une table des matières à chaque début de section où les sections autres que celle en cours apparaissent légèrement grisées (ci-dessous). Par défaut pas de table des matières entre les sections.
+
+\pgfdeclareimage[page=3,height=4cm,width=5cm]{exsecheader}{secheadertutoclasseIMTA}
+\begin{pgfpicture}{0cm}{0cm}{8cm}{6.0cm}
+
+\pgfputat{\pgfxy(4,1.5)}{\pgfbox[left,base]{\pgfuseimage{exsecheader}}}
+
+%\pgfputat{\pgfxy(1,0)}{\pgfbox[left,base]{ insert a header below title showing theIl y a 5 options à ce jour.}}
+\end{pgfpicture}
+
+}
+
+\frame{\frametitle{Option \textbf{secondlogo}}
+L'option \textbf{secondlogo=nom} (\textit{ubl, ccbyncsa, cnrs, subatech, irisa, inserm, lab-sticc, marsouin, ls2n, gepea, ubl, loustic, ifremer}, à compléter) pour un second logo en bas à droite. 
+%Liste à  évidemment (lego, atol, latim, cominglab, etc.). 
+\textbf{secondlogo=ccbyncsa} (à gauche). Par défaut aucun (à droite).
+
+\pgfdeclareimage[page=9,height=4cm,width=5cm]{exsecheader}{secheadertutoclasseIMTA}
+\pgfdeclareimage[page=9,height=4cm,width=5cm]{exsecondlogo}{secondlogotutoclasseIMTA}
+\begin{pgfpicture}{0cm}{0cm}{8cm}{6.0cm}
+
+
+\pgfputat{\pgfxy(1,1.7)}{\pgfbox[left,base]{\pgfuseimage{exsecondlogo}}}
+\pgfputat{\pgfxy(7,1.7)}{\pgfbox[left,base]{\pgfuseimage{exsecheader}}}
+
+\end{pgfpicture}
+
+}
+
+\frame{\frametitle{Option \textbf{printnotes}}
+
+L'option \textbf{printnotes} permet d'intégrer les notes dans le document PDF pour afficahge, impression (ci-dessous). Par défaut sans note.
+\pgfdeclareimage[page=10,height=4cm,width=5cm]{exprintenotessecondlogo}{printnotessecondlogotutoclasseIMTA}
+
+
+\begin{pgfpicture}{0cm}{0cm}{8cm}{6.0cm}
+
+
+\pgfputat{\pgfxy(4,1)}{\pgfbox[left,base]{\pgfuseimage{exprintenotessecondlogo}}}
+
+
+\end{pgfpicture}
+
+}
+
+\frame{\frametitle{Option \textbf{slidesparpage}}
+%
+L'option \textbf{slidesparpage$=1, 2, 4$} place 1 (par défaut, paysage) 2 (portrait) ou 4 (paysage) transparents par page. Ci-dessous un exemple avec \textbf{slidesparpage$=4$}
+%
+
+\pgfdeclareimage[page=2,height=4cm,width=5cm]{spp3secondlogo}{spp3secondlogotutoclasseIMTA}
+\begin{pgfpicture}{0cm}{0cm}{8cm}{6.0cm}
+
+\pgfputat{\pgfxy(4,1)}{\pgfbox[left,base]{\pgfuseimage{spp3secondlogo}}}
+\end{pgfpicture}
+}
+
+
+
+\section{A faire}
+\frame{
+    \frametitle{A faire}
+
+    \blockgreen{Au minimum}{
+
+    \begin{itemize}
+    \item 2e logo sur page de titre
+    \item compléter liste logos
+    \item $\dots$
+
+    \end{itemize}
+   }
+
+}
+
+\end{document}

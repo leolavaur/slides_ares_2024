@@ -1,0 +1,204 @@
+% Philippe Lenca
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+\ProvidesPackageRCS $Header: /usr/share/texmf/tex/latex/philippe.lenca/themes-imt-atlantique/outer/beamerouterthemeIMTatlantique.sty,v 1.0 2017/03/05 12:48:30 lenca $
+
+
+\mode<presentation>
+
+\usepackage{tikz}
+
+
+%% #############################################################################
+%% Logo IMT Atlantique, bottom left
+\newbox\logosimplebox
+\setbox\logosimplebox\hbox\bgroup%
+\begin{tikzpicture}[x=1pt,y=-1pt]
+\pgfdeclareimage[interpolate=true, width=35pt]{imt_atlantique_logo}{images/logo_IMT_Atlantique}
+\node {\pgfuseimage{imt_atlantique_logo}};
+\end{tikzpicture}\egroup
+
+\newcommand{\logosimple}[1]{%
+\resizebox{#1}{#1}{\copy\logosimplebox}}
+
+\newcommand{\logo@footline}[2]{%
+	\resizebox{#1}{!}{\copy\logosimplebox}}
+%% Logo IMT Atlantique, bottom left
+%% -----------------------------------------------------------------------------
+
+
+%% #############################################################################
+%% For second logo, bottom right
+%% -----------------------------------------------------------------------------
+\ifthenelse{\equal{\psl}{ccbyncsa}}{
+	\pgfdeclareimage[interpolate=true, width=2cm, height=0.7cm]{secondlogo}{logo_cc_by_nc_sa}
+}{}
+\ifthenelse{\equal{\psl}{cnrs}}{
+	\pgfdeclareimage[interpolate=true, width=25pt]{secondlogo}{logo_cnrs}
+}{}
+\ifthenelse{\equal{\psl}{subatech}}{
+	\pgfdeclareimage[interpolate=true, width=35pt]{secondlogo}{images/logo_subatech}
+}{}
+\ifthenelse{\equal{\psl}{irisa}}{
+	\pgfdeclareimage[interpolate=true, width=40pt]{secondlogo}{images/logo_irisa}
+}{}
+\ifthenelse{\equal{\psl}{inserm}}{
+	\pgfdeclareimage[interpolate=true, width=40pt]{secondlogo}{images/logo_inserm}
+}{}
+\ifthenelse{\equal{\psl}{lab-sticc}}{
+	\pgfdeclareimage[interpolate=true, width=40pt]{secondlogo}{images/logo_lab-sticc}
+}{}
+\ifthenelse{\equal{\psl}{marsouin}}{
+	\pgfdeclareimage[interpolate=true, width=40pt]{secondlogo}{images/logo_marsouin}
+}{}
+\ifthenelse{\equal{\psl}{ls2n}}{
+	\pgfdeclareimage[interpolate=true, width=40pt]{secondlogo}{images/logo_ls2n}
+}{}
+\ifthenelse{\equal{\psl}{gepea}}{
+	\pgfdeclareimage[interpolate=true, width=40pt]{secondlogo}{images/logo_gepea}
+}{}
+\ifthenelse{\equal{\psl}{ubl}}{
+	\pgfdeclareimage[interpolate=true, width=40pt]{secondlogo}{images/logo_ubl}
+}{}
+\ifthenelse{\equal{\psl}{loustic}}{
+	\pgfdeclareimage[interpolate=true, width=40pt]{secondlogo}{images/logo_loustic}
+}{}
+\ifthenelse{\equal{\psl}{ifremer}}{
+	\pgfdeclareimage[interpolate=true, width=60pt]{secondlogo}{images/logo_ifremer}
+}{}
+
+\ifthenelse{\NOT \equal{\psl}{vide}}{
+	\beamer@partnerlogotrue
+	\newbox\secondlogoimplebox
+	\setbox\secondlogoimplebox\hbox\bgroup%
+	\begin{tikzpicture}[x=1pt,y=-1pt]
+	\node {\pgfuseimage{secondlogo}};
+	\end{tikzpicture}\egroup%
+	\newcommand{\secondlogo}{\copy\secondlogoimplebox}}
+{}
+
+
+
+% No more used
+\newcommand{\secondlogo@footline}[2]{%
+	\resizebox{#1}{#2}{\copy\secondlogoimplebox}}
+
+%% For second logo, bottom right
+%% -----------------------------------------------------------------------------
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Navigation symbols
+\newcommand{\separateur}{{\tiny$\blacktriangleright$}}
+ \defbeamertemplate*{navigation symbols}{}
+{%
+  \hbox{%
+    \hbox{\insertslidenavigationsymbol}
+    \hbox{\insertframenavigationsymbol}
+    \hbox{\insertsubsectionnavigationsymbol}
+    \hbox{\insertsectionnavigationsymbol}
+    \hbox{\insertdocnavigationsymbol}
+    \hbox{\insertbackfindforwardnavigationsymbol}%
+  }%
+}
+
+% No navigation symbols in handout or trans mode:
+\only<handout| trans | presentation>{\setbeamertemplate{navigation symbols}{}}
+%% Navigation symbols
+%% -----------------------------------------------------------------------------
+
+
+% Headline and footline
+\newsavebox{\tempbox}
+
+
+	
+\defbeamertemplate*{footline}{IMTAtlantique theme}
+{
+\leavevmode%
+\begin{tikzpicture}
+%\draw[fill,red] (0,0) circle(0.1);
+	\node[right] at (-0.4,-0.8)	{\logo@footline{2cm}{1.32cm}};
+	\ifbeamer@footline{
+	\draw[grisimtatlantique,dashed] (2,-1.2) rectangle (6.7,-0.4);
+	%\node[rectangle,dashed, below,draw=black,minimum width=6.6cm, minimum height=1.0cm,inner sep=0pt, inner ysep=0pt] at (3,-1) {\scshape\insertshorttitle};%\\
+	\node[right] at (2.05,-0.7) {\color{grisimtatlantique}\scshape\insertshorttitle} ;
+	\node[right] at (2.05,-1.0) {\color{grisimtatlantique}\insertshortauthor} ;
+	\draw[grisimtatlantique,dashed] (7.2,-1.2) rectangle (9.7,-0.4);
+	\node[right] at (7.25,-1.0) {\usebeamerfont{date}\color{grisimtatlantique}\insertdate} ;
+	\ifbeamer@partnerlogo{
+		\node[left] at (12.5, -0.8) {\secondlogo};%{\secondlogo@footline{2.38cm}{1.0cm}};
+		}\fi
+	}\fi
+\end{tikzpicture}
+}%
+
+
+
+\defbeamertemplate*{sidebar left}{IMTAtlantique}
+{}
+
+\defbeamertemplate*{sidebar right}{IMTAtlantique}
+{
+  \vfill%
+  
+  \llap{\usebeamertemplate***{navigation symbols}\hskip1.03cm}%
+ \vskip0cm%
+}
+
+
+
+
+% Frame title: default
+
+\defbeamertemplate*{frametitle}{IMTAtlantique}[1][left]{
+  \vskip-10pt
+  \leavevmode%
+  \ifbeamer@currentsecheader{%
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=8mm]{grisimtatlantique}%
+	\hspace{1mm}
+	{\small\color{vertimtatlantique}\sectionname~\insertsectionnumber}%
+	\ifbeamer@isinenglish
+		{\small\color{noirimtatlantique}{:~} \insertsection}%
+	\else
+		{\small\color{noirimtatlantique}{~:~} \insertsection}%
+	\fi
+  \end{beamercolorbox}%
+  }\vskip-2pt%
+  }\else{%
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=3mm]{grisimtatlantique}%
+  \end{beamercolorbox}%
+  }\vskip-4pt%
+  }\fi
+  \hbox{%
+  	\begin{beamercolorbox}[wd=\paperwidth,ht=5mm]{grisimtatlantique}
+		\usebeamerfont{frametitle} 		{{\usebeamercolor[fg]{noirimtatlantique}\hspace{1mm}{\textbf\strut\insertframetitle\strut}}}
+		{\color{vertimtatlantique} \hfill\insertframenumber\hspace*{2em}}%
+	\end{beamercolorbox}%  
+  }%
+  \vskip-7pt
+	\ifbeamer@secheader{%
+		\begin{beamercolorbox}[wd=\paperwidth,ht=6pt]{grisimtatlantique}%
+		\tiny\insertsectionnavigationhorizontal{\paperwidth}{}{}
+		\end{beamercolorbox}%
+	}\else{
+		\begin{beamercolorbox}[wd=\paperwidth,ht=6pt]{grisimtatlantique}
+		\end{beamercolorbox}%
+	}\fi
+}
+
+
+% Frame title continuations, default
+
+
+
+
+\mode
+<all>

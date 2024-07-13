@@ -1,0 +1,200 @@
+
+
+\definecolor{PLbleu}{rgb}{0.00,0.00,1.00}
+%\definecolor{bluealert}{rgb}{0.00,0.00,1.00}
+\definecolor{bluealert}{RGB}{0,184,222}
+%\definecolor{greenalert}{rgb}{0.0 0.9  0.5}
+\definecolor{greenalert}{RGB}{164, 210, 51}
+%\definecolor{redalert}{rgb}{0.9 0.0 0.0}
+\definecolor{redalert}{RGB}{255,0,0}
+
+\newcommand{\ret}{\par\vspace{1ex}}
+
+
+
+
+\newcommand{\conclusion}[1]{%
+    \ret
+    \begin{beamerboxesrounded}[scheme=normal, shadow=true]{}
+    %\begin{center}#1\end{center}
+    {\large $\hookrightarrow$} #1
+    \end{beamerboxesrounded}
+    \ret
+    }
+
+\newcommand{\conclusionPL}[1]{%
+    \ret
+    \begin{beamerboxesrounded}[scheme=normal, shadow=true]{}
+    %\begin{center}#1\end{center}
+    {\large $\hookrightarrow$} #1
+    \end{beamerboxesrounded}
+    \ret
+    }
+
+\newcommand{\conclusionPLbleu}[1]{%
+    \setbeamercolor{block body}{bg=blue!30!black}
+    \setbeamercolor{block body}{fg=white}
+    \setbeamercolor{block title}{fg=blue!30!black}
+    \setbeamercolor{block title}{bg=blue!30!black}
+    \ret
+    \begin{beamerboxesrounded}[lower=block body, shadow=true]{}
+    %\begin{center}#1\end{center}
+    {\large $\hookrightarrow$} #1
+    \end{beamerboxesrounded}
+    \ret
+    }
+
+\newcommand{\conclusionPLbleuSB}[1]{% shadowbox
+    \setbeamercolor{block body}{fg=blue!30!black}
+    \setbeamercolor{block body}{bg=white}
+    \setbeamercolor{block title}{fg=white}
+    \setbeamercolor{block title}{bg=white}
+    \ret
+    \begin{beamerboxesrounded}[lower=block body, shadow=true]{}
+    %\begin{center}#1\end{center}
+    {\large $\hookrightarrow$} #1
+    \end{beamerboxesrounded}
+    \ret
+	}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bleu
+%
+
+\newcommand{\vertPLalert}[1]{\relax\ifmmode {\textrm{\sc #1}\xspace}%
+  \else {\textcolor{vert_fond}{#1}\xspace}\fi}
+
+\newcommand{\rougePLalert}[1]{\relax\ifmmode {\textrm{\sc #1}\xspace}%
+  \else {\textcolor{red}{#1}\xspace}\fi}
+
+\newcommand{\bleuPLdefinition}[2]
+    {
+    \setbeamercolor{block body}{bg=bleuclairimtatlantique!10} %{bg=structure.fg!10}
+    \setbeamercolor{block body}{fg=black}
+    \setbeamercolor{block title}{fg=white}
+    \setbeamercolor{block title}{bg=bleufonceimtatlantique} %!30!black}
+    %\ret%\vspace{0.1cm}
+    \begin{beamerboxesrounded}[lower=block body, shadow=true]{#1}
+    #2
+    \end{beamerboxesrounded}
+    %\vspace{0.1cm}
+    }
+
+\newcommand{\blockblue}[2]
+    {
+    \ret
+    \setbeamercolor{block body}{bg=bleuclairimtatlantique!10} %{bg=structure.fg!10}
+    \setbeamercolor{block body}{fg=black}
+    \setbeamercolor{block title}{fg=white}
+    \setbeamercolor{block title}{bg=bleufonceimtatlantique} %!30!black}
+    %\ret%\vspace{0.1cm}
+    \begin{beamerboxesrounded}[lower=block body, shadow=true]{#1}
+    #2
+    \end{beamerboxesrounded}
+    %\vspace{0.1cm}
+    }
+    
+
+
+\newcommand{\bleuPLconclusion}[1]{%
+    \setbeamercolor{block body}{bg=blue!30!black}
+    \setbeamercolor{block body}{fg=white}
+    \setbeamercolor{block title}{fg=white}
+    \setbeamercolor{block title}{bg=blue!30!black}
+    \ret
+    \begin{beamerboxesrounded}[lower=block body, shadow=true]{}
+    %\begin{center}#1\end{center}
+    {\Large $\hookrightarrow$} #1
+    \end{beamerboxesrounded}
+    \ret
+    }
+
+\newcommand{\backgroundlightblue}[1]
+{
+	\ret
+	\begin{beamercolorbox}[wd=\textwidth, sep=0.1cm, dp=0.1cm ]{bleuclairimtatlantique}
+		#1
+	\end{beamercolorbox}
+}
+
+\newcommand{\thmblue}[1]{%
+\ret    
+\begin{beamercolorbox}[wd=\textwidth,sep=0.1cm]{bleufonceimtatlantique}
+{\Large \color{blancimtatlantique}$\RHD$} \color{blancimtatlantique}#1
+\end{beamercolorbox}
+}
+
+\newcommand{\textalertblue}[1]{%
+	{\bf \textcolor{bluealert}{#1}}\xspace
+	%{\color{bluealert}#1}\xspace
+}
+
+\newcommand{\bleuPLalert}[1]{\relax\ifmmode {\textrm{\sc #1}\xspace}%
+	\else {\textcolor{bluealert}{#1}\xspace}\fi}
+
+% Bleu ---------------------------------------------------------
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Gray
+%
+\newcommand{\blockgray}[2]
+    {
+    \setbeamercolor{block body}{bg=grisimtatlantique!10}
+    \setbeamercolor{block body}{fg=noirimtatlantique}
+    \setbeamercolor{block title}{fg=noirimtatlantique}
+    \setbeamercolor{block title}{bg=grisimtatlantique}%{bg=blue!80!black}
+    \begin{beamerboxesrounded}[lower=block body, shadow=true]{#1}
+    #2
+    \end{beamerboxesrounded}
+    }
+    
+\newcommand{\backgroundgray}[1]
+{
+\ret
+\begin{beamercolorbox}[wd=\textwidth, sep=0.1cm, dp=0.1cm ]{grisimtatlantique}
+		#1
+\end{beamercolorbox}
+}
+
+    
+\newcommand{\thmgray}[1]{%
+\ret    
+\begin{beamercolorbox}[wd=\textwidth,sep=0.1cm]{grisimtatlantique}
+{\Large \color{noirimtatlantique}$\RHD$} \color{noirimtatlantique}#1
+\end{beamercolorbox}
+}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Green
+%
+
+
+\newcommand{\blockgreen}[2]
+    {
+    \setbeamercolor{block body}{bg=vertimtatlantique!10}
+    \setbeamercolor{block body}{fg=black}
+    \setbeamercolor{block title}{fg=white}
+    \setbeamercolor{block title}{bg=vertimtatlantique}%{bg=blue!80!black}
+    \begin{beamerboxesrounded}[lower=block body, shadow=true]{#1}
+    #2
+    \end{beamerboxesrounded}
+    }
+    
+    
+\newcommand{\thmgreen}[1]{%
+\ret    
+\begin{beamercolorbox}[wd=\textwidth,sep=0.1cm]{vertimtatlantique}
+{\Large \color{blancimtatlantique}$\RHD$} \color{blancimtatlantique}#1
+\end{beamercolorbox}
+}
+
+\newcommand{\textalertgreen}[1]{%
+	{\bf \textcolor{greenalert}{#1}}\xspace
+}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Red
+%
+\newcommand{\textalertred}[1]{%
+	{\bf \textcolor{redalert}{#1}}\xspace
+}

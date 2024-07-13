@@ -1,0 +1,165 @@
+% Philippe Lenca
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+\ProvidesPackageRCS $Header: /usr/share/texmf/tex/latex/philippe.lenca/themes-imt-atlantique/theme/beamerthemeIMTAtlantique.sty,v 1.0 2017/03/05 12:48:30 lenca $
+
+\usepackage{tikz}
+
+\mode<presentation>
+
+\newif\ifbeamer@secheader
+\beamer@secheaderfalse
+\newif\ifbeamer@currentsecheader
+\beamer@currentsecheaderfalse
+\newif\ifbeamer@isinenglish
+\beamer@isinenglishfalse
+\newif\ifbeamer@printnotes
+\beamer@printnotesfalse
+\newif\ifbeamer@outlineabs
+\beamer@outlineabsfalse
+\newif\ifbeamer@partnerlogo
+\beamer@partnerlogofalse
+\newif\ifbeamer@footline
+\beamer@footlinefalse
+
+\DeclareOptionBeamer{secheader}{\beamer@secheadertrue}
+\DeclareOptionBeamer{currentsecheader}{\beamer@currentsecheadertrue}
+
+\DeclareOptionBeamer{isinenglish}{\beamer@isinenglishtrue}
+\DeclareOptionBeamer{printnotes}{\beamer@printnotestrue}
+
+\DeclareOptionBeamer{outlineabs}{\beamer@outlineabstrue}
+
+\DeclareOptionBeamer{footline}{\beamer@footlinetrue}
+
+\newcommand{\spp}{1}
+\DeclareOptionBeamer{slidesparpage}{\renewcommand{\spp}{#1}}
+
+\newcommand{\psl}{vide} % print second log
+\DeclareOptionBeamer{secondlogo}{\renewcommand{\psl}{#1}}
+
+\newcommand{\sectorchapt}{vide} % section or chapter
+\DeclareOptionBeamer{sectorchapt}{\renewcommand{\sectorchapt}{#1}}
+
+\ProcessOptionsBeamer
+\RequirePackage{ifthen}
+\RequirePackage{pgfpages}
+
+
+\ifthenelse{\equal{\spp}{2}}{\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]}{}
+\ifthenelse{\equal{\spp}{3}}{\pgfpagesuselayout{3 on 1}[a4paper,border shrink=5mm]}{}
+\ifthenelse{\equal{\spp}{4}}{\pgfpagesuselayout{4 on 1}[a4paper,border shrink=5mm,landscape]}{}
+
+
+
+
+\usepackage{array}
+%\usefonttheme{default}%{imtatlantique}%
+\usefonttheme{IMTatlantique}
+\usecolortheme{IMTatlantique}
+\useinnertheme{IMTatlantique}
+\useoutertheme{IMTatlantique}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Text margins
+% Text 'space' -------------------
+% Text margins and vertical space
+% To fix later, already in innertheme
+% but does seems to be 'operational'
+% Text margins
+%\setbeamersize{text margin left=0.7cm,text margin right=0.7cm}
+\setbeamersize{text margin left=10pt,text margin right=10pt}
+
+% Vertical space between title frame and main text
+%\addtobeamertemplate{frametitle}{}{\vspace{0.5cm}} % increase
+\addtobeamertemplate{frametitle}{}{\vspace{-0.2cm}} % decrease
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Some images
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Options
+%
+% English or French
+\ifbeamer@isinenglish
+\renewcommand{\sectionname}{Chapter}%
+\newcommand{\sommaire}{OUTLINE}
+\newcommand{\bibliographie}{References}
+\newcommand{\bibliographieshort}{Ref}
+\else
+\renewcommand{\sectionname}{Chapitre}% 
+\newcommand{\sommaire}{SOMMAIRE}
+\newcommand{\bibliographie}{R{\'e}f{\'e}rences}
+\newcommand{\bibliographieshort}{R{\'e}f}
+\fi
+% Print notes
+\ifbeamer@printnotes
+\usepackage{pgfpages}
+\setbeameroption{show notes}
+\else
+\setbeameroption{hide notes}
+\fi
+
+
+\ifthenelse{\equal{\sectorchapt}{section}}{
+\renewcommand{\sectionname}{Section}%
+}{}
+
+% Template Outline at begining sections
+\ifbeamer@outlineabs
+\AtBeginSection[]
+{
+	\setbeamertemplate{background}{%
+		%\tikz\node[opacity=0.3] at (current page.center) %{\includegraphics[height=\paperheight]{unspecified}};
+		\begin{tikzpicture}[remember picture,overlay, anchor = west]
+		%\draw (0,0) grid (12,-9.0);
+		
+		\coordinate (pagenw) at (0,0);
+		\coordinate (pagesw) at ([yshift=-\paperheight]pagenw);
+		\coordinate (pagene) at ([xshift=\paperwidth]pagenw);
+		\coordinate (pagese) at ([xshift=\paperwidth]pagesw);
+		
+		\coordinate (greentop) at (8,0);
+		\coordinate (greenbottom) at (0,-8);
+		\coordinate (greytop) at (3, -5);
+		\coordinate (greyright) at ([xshift=\paperheight-2cm]pagesw);
+		
+		
+		\fill[grisimtatlantique] (pagesw) -- (greenbottom) -- (greytop) -- (greyright) -- cycle;
+		\fill[vertimtatlantique] (pagenw) -- (greentop)  -- (greenbottom) -- cycle;
+		\node at (1,-1) {\usebeamerfont{author} \usebeamercolor[white]{subtitle}\bfseries\sommaire};
+		\pgfdeclareimage[interpolate=true, width=80pt]{sfimtatlantiquelogo}{logosansfondimtatlantique};
+		\node[xshift=1cm,yshift=0cm,anchor=south west] at (pagesw) {\pgfuseimage{sfimtatlantiquelogo}};
+		\end{tikzpicture}
+	}
+	\frame[plain,c]{
+		\thispagestyle{empty}
+		\begin{minipage}[c]{7cm}%[hauteur][position]{largeur}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[c]{\linewidth - 7cm}%[hauteur][position]{largeur}
+			\vspace{1cm}
+%			\tableofcontents[section,hideallsubsections]
+			\tableofcontents[currentsection,hideallsubsections]
+		\end{minipage}
+	}
+	\setbeamertemplate{background}{}
+}
+\fi
+%%
+%% -----------------------------------------------------------------------------------
+
+\mode
+<all>

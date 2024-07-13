@@ -1,0 +1,9 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is '/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.blg'
+[42] biber:341> INFO - === Fri Jul 12, 2024, 12:11:26
+[55] Biber.pm:419> INFO - Reading '/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.bcf'
+[100] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
+[108] bbl.pm:660> INFO - Writing '/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.bbl' with encoding 'UTF-8'
+[108] bbl.pm:763> INFO - Output to /Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.bbl
+[108] Biber.pm:131> WARN - The file '/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.bcf' does not contain any citations!
+[108] Biber.pm:133> INFO - WARNINGS: 1
