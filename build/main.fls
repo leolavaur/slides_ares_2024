@@ -489,8 +489,6 @@ INPUT ./figures/hyperparams-continous-cicids-small.pdf
 INPUT ./figures/hyperparams-continous-cicids-small.pdf
 INPUT ./figures/hyperparams-late.pdf
 INPUT ./figures/hyperparams-late.pdf
-INPUT ./figures/baseline.pdf
-INPUT ./figures/baseline.pdf
 INPUT ./figures/backdoors.pdf
 INPUT ./figures/backdoors.pdf
 INPUT /Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.toc
@@ -516,10 +514,7 @@ INPUT /Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.out
 INPUT /Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.run.xml
 OUTPUT /Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.run.xml
 INPUT /nix/store/dn9jpafdsrzsnnf0cj06r4aiy1wcdz79-texlive-2023-env-texmfdist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-INPUT /nix/store/dn9jpafdsrzsnnf0cj06r4aiy1wcdz79-texlive-2023-env-texmfdist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /nix/store/dn9jpafdsrzsnnf0cj06r4aiy1wcdz79-texlive-2023-env-texmfdist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-INPUT /nix/store/dn9jpafdsrzsnnf0cj06r4aiy1wcdz79-texlive-2023-env-texmfdist/fonts/type1/public/amsfonts/cm/cmr7.pfb
-INPUT /nix/store/dn9jpafdsrzsnnf0cj06r4aiy1wcdz79-texlive-2023-env-texmfdist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /nix/store/dn9jpafdsrzsnnf0cj06r4aiy1wcdz79-texlive-2023-env-texmfdist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /nix/store/dn9jpafdsrzsnnf0cj06r4aiy1wcdz79-texlive-2023-env-texmfdist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /nix/store/dn9jpafdsrzsnnf0cj06r4aiy1wcdz79-texlive-2023-env-texmfdist/fonts/type1/public/amsfonts/symbols/msam10.pfb

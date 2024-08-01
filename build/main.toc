@@ -1,8 +1,5 @@
 \babel@toc {english}{}\relax 
 \beamer@sectionintoc {1}{Methodology and Research Questions}{20}{0}{1}
 \beamer@sectionintoc {2}{Experimental setup}{28}{0}{2}
-\beamer@sectionintoc {3}{Results}{32}{0}{3}
-\beamer@subsectionintoc {3}{1}{RQ1: Predictability}{33}{0}{3}
-\beamer@subsectionintoc {3}{2}{RQ2: Hyperparameters}{37}{0}{3}
-\beamer@subsectionintoc {3}{3}{RQ4: Backdoors}{40}{0}{3}
-\beamer@sectionintoc {4}{Conclusion}{44}{0}{4}
+\beamer@sectionintoc {3}{Results}{34}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{45}{0}{4}

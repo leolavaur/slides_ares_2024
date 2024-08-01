@@ -393,9 +393,50 @@
 \end{itemize}
 \end{frame}
 
-\section{Results}
+\begin{frame}
+	\frametitle{Appropriate metrics}
+	
+	\textbf{\Acrfull{aasr}}\vspace{.5ex}
 
-\subsection{RQ1: Predictability}
+	\begin{itemize}
+		\item Targeted attacks $\rightarrow$ miss rate on the targeted class:\vspace{.5ex}
+		\begin{equation*}
+			\frac{
+				\text{FN}_\text{class}
+			}{
+				\text{TP}_\text{class} + \text{FN}_\text{class}
+			}
+		\end{equation*}\vspace{.5ex}
+
+		\item Untargeted attacks $\rightarrow$ misclassification rate:\vspace{.5ex}
+		\begin{equation*}
+			1 - \text{accuracy}
+		\end{equation*}
+
+	\end{itemize}
+
+	\onslide<2>{\vspace{1ex}
+	\textbf{\Acrfull{rasr}}\vspace{.5ex}
+
+	\begin{itemize}
+		\item \acrshort{asr} relative to the benign scenario:\vspace{.5ex}
+		\begin{equation*}
+			\frac{
+				\text{max}(\text{AASR}_\text{benign}, \text{AASR}_\text{attack}) - \text{AASR}_\text{benign}
+			}{
+				1 - \text{AASR}_\text{benign}
+			}			
+		\end{equation*}
+
+	\end{itemize}}
+\end{frame}
+
+\glsunset{aasr}
+\glsunset{rasr}
+\glsunset{asr}
+
+
+\section{Results}
 
 \begin{frame}
 \frametitle{RQ1: Is the behavior of poisoning attacks predictable?}
@@ -442,8 +483,6 @@
 
 \end{frame}
 
-\subsection{RQ2: Hyperparameters}
-
 \begin{frame}
 	\frametitle{RQ2: Do hyperparameters influence the effect of poisoning attacks?}
 
@@ -478,52 +517,6 @@ Answer:
 	\end{itemize}
 \end{itemize}
 \end{frame}
-
-\subsection{RQ4: Backdoors}
-
-	\begin{frame}
-	\frametitle{Appropriate metrics}
-	
-	\begin{columns}
-		\begin{column}{0.55\textwidth}
-			\textbf{\Gls{aasr}}
-
-			\begin{itemize}
-				\item Targeted attacks:
-				\begin{itemize}
-					\item miss rate on a class: $\frac{\text{FN}_\text{class}}{\text{TP}_\text{class} + \text{FN}_\text{class}}$
-				\end{itemize}
-				\item Untargeted attacks:
-				\begin{itemize}
-					\item misclassification rate: $1 - \text{accuracy}$
-				\end{itemize}
-			\end{itemize}
-
-			\textbf{\Gls{rasr}}
-
-			\begin{itemize}
-				\item $\frac{
-					\text{max}(\text{AASR}_\text{benign}, \text{AASR}_\text{attack}) - \text{AASR}_\text{benign}
-				}{
-					1 - \text{AASR}_\text{benign}
-				}$
-			\end{itemize}
-		\end{column}
-		\begin{column}{0.35\textwidth}
-			\vspace{-3ex}
-			\begin{figure}
-				\centering
-				\includegraphics[width=.8\linewidth]{figures/baseline.pdf}
-				\caption{Baseline for benign runs.}
-			\end{figure}
-
-		\end{column}
-	\end{columns}
-
-	
-
-\end{frame}
-
 
 \begin{frame}
 
