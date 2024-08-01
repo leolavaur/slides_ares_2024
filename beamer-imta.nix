@@ -1,6 +1,7 @@
 { lib
 , stdenv, fetchgit, writeShellScript
 , texlive
+, kpsewhich
 }:
 
 stdenv.mkDerivation rec {

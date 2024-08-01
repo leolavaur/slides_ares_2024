@@ -2363,8 +2363,38 @@
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
     <bcf:datasource type="file" datatype="bibtex" glob="false">references.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">own.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1" intorder="1">mcmahan_Communicationefficientlearningdeep_2017</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">mcmahan_Communicationefficientlearningdeep_2017</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">mcmahan_Communicationefficientlearningdeep_2017</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">mcmahan_Communicationefficientlearningdeep_2017</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">mcmahan_Communicationefficientlearningdeep_2017</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">lavaur_tnsm_2022</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">lavaur_tnsm_2022</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">lavaur_icdcs_demo_2024</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">tolpegin_DataPoisoningAttacks_2020</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">tolpegin_DataPoisoningAttacks_2020</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">tolpegin_DataPoisoningAttacks_2020</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">tolpegin_DataPoisoningAttacks_2020</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">tolpegin_DataPoisoningAttacks_2020</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">tolpegin_DataPoisoningAttacks_2020</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">vy_FederatedLearningBasedIntrusion_2021</bcf:citekey>
+    <bcf:citekey order="15" intorder="2">yang_Dependablefederatedlearning_2023</bcf:citekey>
+    <bcf:citekey order="15" intorder="3">zhang_Evaluationdatapoisoning_2022</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">tolpegin_DataPoisoningAttacks_2020</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">vy_FederatedLearningBasedIntrusion_2021</bcf:citekey>
+    <bcf:citekey order="17" intorder="2">yang_Dependablefederatedlearning_2023</bcf:citekey>
+    <bcf:citekey order="17" intorder="3">zhang_Evaluationdatapoisoning_2022</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">lavaur_icdcs_demo_2024</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">beutel_Flowerfriendlyfederated_2020</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">Hydra</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">dolstra_purelyfunctionalsoftware_2006</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">lavaur_icdcs_demo_2024</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">beutel_Flowerfriendlyfederated_2020</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">Hydra</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">dolstra_purelyfunctionalsoftware_2006</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
@@ -2376,4 +2406,13 @@
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="none/global//global/global"
+                type="entry"
+                sortingtemplatename="none"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
 </bcf:controlfile>

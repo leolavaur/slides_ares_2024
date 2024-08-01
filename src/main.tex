@@ -57,7 +57,7 @@
 \usepackage{bbm}
 \usepackage[absolute]{textpos}
 
-
+\usepackage{booktabs}
 
 \usepackage{pgfpages}
 \usepackage{format-IMT-Atlantique}
@@ -92,6 +92,7 @@
 
 
 \usepackage[acronym]{glossaries}
+\glsdisablehyper
 \loadglsentries{glossary}
 \makenoidxglossaries
 
@@ -106,12 +107,14 @@
 
 \usepackage[style=ieee]{biblatex}
 \addbibresource{references.bib}
+\addbibresource{own.bib}
+\renewcommand*{\bibfont}{\scriptsize}
 
-\title{\vspace{3\baselineskip}What if attackers are indeed inside?\\}
+\title{\vspace{3\baselineskip}What if the attackers are inside?\\}
 
-\subtitle{A Systematic Analysis of Label-flipping Attacks against Federated Learning for Intrusion Detection\\}
+\subtitle{A Systematic Analysis of Label-flipping Attacks against Federated Learning for Intrusion Detection\\\linebreak}
 
-\author{\textbf{Léo Lavaur}\textsuperscript{1}, Yann Busnel\textsuperscript{2}, and Fabien Autrel\textsuperscript{1}}
+\author{\underline{\textbf{Léo Lavaur}}\textsuperscript{1}, Yann Busnel\textsuperscript{2}, and Fabien Autrel\textsuperscript{1}}
 
 \institute{\textsuperscript{1} IMT Atlantique, \textsuperscript{2} IMT Nord Europe\\}
     
@@ -122,37 +125,32 @@
 
 \maketitle
 
-% \begin{frame}
-% 	\frametitle{\acrfull{nids}}
-% 	\glsunset{nids}
+\begin{frame}
+	\frametitle{\acrfull{nids}}
+	\glsunset{nids}
 
-% 	\begin{figure}
-% 		\centering
-% 		\includegraphics[width=\linewidth]{./figures/mlp-workflow.pdf}
-% 		\caption{Typical \acrshort{nids} workflow.}
-% 	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{./figures/mlp-workflow.pdf}
+		\caption{Typical \acrshort{nids} workflow.}
+	\end{figure}
 
-% 	\begin{itemize}
-% 		\item Great performance with \Gls{dl} (on public datasets at least (: )
-% 		\item \textbf{Limitations}: lack of labelled data, risk of local bias or skewed data distribution, inefficient against new attacks.
-% 	\end{itemize}
+	\begin{itemize}
+		\item Great performance with \Gls{dl} (on public datasets at least)
+		\item \textbf{Limitations}: lack of labelled data, risk of local bias or skewed data distribution, inefficient against new attacks.
+	\end{itemize}
 
-% \end{frame}
+\end{frame}
 
 \begin{frame}
-	\frametitle{\acrfull{fids}}
+	\frametitle{Scaling~\gls{nids} with \acrshort{fl}}
 
 	\begin{columns}
 		\begin{column}{0.4\linewidth}
 			\vspace{-\textheight}
 			\begin{itemize}
-				\item \Acrfull{fl} is a distributed \Acrfull{ml} paradigm.
-				\item Can train a global model without sharing local data.
-				\item Can be used in \Acrfull{cids}:
-				\begin{itemize}
-					\item Extend the training data
-					\item Effectively share knowledge (\eg, on specific classes, instances) between participants
-				\end{itemize}
+				\item \Acrfull{fl} is a distributed \Acrfull{ml} paradigm~\cite{mcmahan_Communicationefficientlearningdeep_2017}.
+				\item Participants train a global model without sharing local data.
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.6\linewidth}
@@ -165,11 +163,40 @@
 			\end{overlayarea}
 		\end{column}
 	\end{columns}
-
 \end{frame}
+
 \glsunset{fids}
 \glsunset{fl}
 \glsunset{ml}
+
+\begin{frame}
+	\frametitle{\acrfull{fids}}
+	\begin{columns}
+		\begin{column}{0.5\linewidth}
+			\begin{overlayarea}{\linewidth}{\textheight}
+				\vspace{.5ex}
+				FL can be used in \Acrfull{cids}~\cite{lavaur_tnsm_2022}:
+				\begin{itemize}
+					\item Extend the training data with \acrfull{hfl}
+					\begin{itemize}
+						\item[$\rightarrow$] Reduce the risk of local bias
+					\end{itemize}
+					\only<2>{\item Effectively share knowledge (\eg, on specific classes, instances) between participants
+					\begin{itemize}
+						\item[$\rightarrow$] Share the knowledge about a new attack~\cite{lavaur_icdcs_demo_2024};
+						\item[$\rightarrow$] Improve the characterization of specific devices; \dots
+					\end{itemize}}
+				\end{itemize}
+			\end{overlayarea}
+		\end{column}
+		\begin{column}{0.5\linewidth}
+			\vspace{-.8\textheight}
+			\includegraphics[width=\linewidth]{./figures/fl.pdf}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\glsunset{hfl}
 
 \begin{frame}
 	\frametitle{\Gls{fl} against malicious contributions}
@@ -178,10 +205,17 @@
 		\begin{column}{0.4\linewidth}
 			\vspace{-\textheight}
 			\begin{itemize}
-				\item \Gls{fl} is highly susceptible to poisoning.
-				\begin{itemize}
-					\item Few studies on their impact in \gls{fids}.
-				\end{itemize}
+				\item \Gls{fl} is highly susceptible to poisoning~\cite{tolpegin_DataPoisoningAttacks_2020}.
+				\only<6->{%
+					\item Lots of existing countermeasures~\cite{vy_FederatedLearningBasedIntrusion_2021,yang_Dependablefederatedlearning_2023,zhang_Evaluationdatapoisoning_2022} in \gls{fids} already\dots%
+				}
+				\only<7>{%
+					\item Yet, their impact is difficult to estimate.
+					\begin{itemize}
+						\item Few studies in the \gls{fids} context, often partial.
+						\item Nothing on aggregated classes.
+					\end{itemize}%
+				}
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.6\linewidth}
@@ -190,7 +224,7 @@
 				\only<2>{\includegraphics[width=\linewidth]{./figures/fl-poisoning-2.pdf}}
 				\only<3>{\includegraphics[width=\linewidth]{./figures/fl-poisoning-3.pdf}}
 				\only<4>{\includegraphics[width=\linewidth]{./figures/fl-poisoning-4.pdf}}
-				\only<5>{\includegraphics[width=\linewidth]{./figures/fl-poisoning-5.pdf}}
+				\only<5->{\includegraphics[width=\linewidth]{./figures/fl-poisoning-5.pdf}}
 			\end{overlayarea}
 		\end{column}
 	\end{columns}
@@ -198,30 +232,64 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Types of poisoning attacks}
-\begin{itemize}
-    \item By component:
-    \begin{itemize}
-			\item Data poisoning (\eg, \textbf<2>{label-flipping}, clean-label attacks, backdoors)
-			\item Model poisoning (\eg, gradient boosting, noising)
-    \end{itemize}
-		\item By target:
+	\frametitle{Types of poisoning attacks}
+
+	\begin{overlayarea}{\textwidth}{.7\textheight}
 		\begin{itemize}
-			\item \textbf<2>{Untargeted}: affect the model's global performance
-			\item \textbf<2>{Targeted}: modify its behavior on specific classes or instances
+			\item By component:
+			\begin{itemize}
+				\item Data poisoning (\eg, \textbf<2>{label-flipping}, clean-label attacks, backdoors)
+				\item Model poisoning (\eg, gradient boosting, noising)
+			\end{itemize}
+			\item By target:
+			\begin{itemize}
+				\item \textbf<2>{Untargeted}: affect the model's global performance
+				\item \textbf<2>{Targeted}: modify its behavior on specific classes or instances
+			\end{itemize}
+			\item By frequency:
+			\begin{itemize}
+				\item one-shot: attacks are performed once
+				\item \textbf<2>{iterative/continuous: at each round}
+				\item adaptive: reacts to the model aggregation
+			\end{itemize}
 		\end{itemize}
-		\item By frequency:
-		\begin{itemize}
-			\item one-shot: attacks are performed once
-			\item \textbf<2>{iterative/continuous: at each round}
-			\item adaptive: reacts to the model aggregation
-		\end{itemize}
-	\end{itemize}
+	\end{overlayarea}
+	\centering
+	\only<2>{\begin{overlayarea}{.6\textwidth}{.4\textheight}
+		\blockblue{\textbf{Our work}}{Continuous label-flipping attacks in collaborative \gls{ids} context.}
+	\end{overlayarea}}
+
 \end{frame}
 
 \tableofcontentsimtatlantique
 
-\section{Experiments}
+\section{Methodology and Research Questions}
+
+\begin{frame}
+	\frametitle{Threat model}
+
+	\begin{itemize}
+			\item<1-> A malicious participant can alter its local dataset before training, and start/stop the attack at any round $r$.
+			\begin{itemize}
+				\item Either done by the client itself or by an external attacker.
+			\end{itemize}
+			\item<2-> The attacker can manipulate labels of its dataset.
+			\begin{itemize}
+				\item Untargeted: flip the labels of a proportion of samples.
+				\item Targeted: associate benign labels to a proportion of samples from a specific attack class.
+			\end{itemize}
+			\item<3-> An attacker can poison any proportion of its local data
+			\begin{itemize}
+				\item \Acrfull{dpr}: ($\alpha$) $\rightarrow$ proportion of flipped samples.
+			\end{itemize}
+			\item<4-> Multiple attackers can collude to perform the attack.
+			\begin{itemize}
+				\item \Acrfull{mpr}: ($\tau$) $\rightarrow$ proportion of attackers.
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+\glsunset{dpr}
+\glsunset{mpr}
 
 \begin{frame}
 	\frametitle{Research questions}
@@ -234,11 +302,48 @@
 			\item RQ4. Are IDS backdoors realistic using label-flipping attacks?
 			\item RQ5. Is there a critical threshold where label-flipping attacks begin to impact performance?
     \end{itemize}
-\end{itemize}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Experimental setup}
+	\frametitle{Evaluation framework}
+	
+	Experiment orchestration using \texttt{Eiffel}~\cite{lavaur_icdcs_demo_2024}.
+	\begin{itemize}
+			\item \texttt{Flower} simulation framework~\cite{beutel_Flowerfriendlyfederated_2020} for \gls{fl}.
+			\item \texttt{Hydra}~\cite{Hydra} for experiment generation and configuration.
+			\item Custom-made poisoning engine with different attack strategies.
+			\item Nix~\cite{dolstra_purelyfunctionalsoftware_2006} and Poetry to fix system and Python dependencies, enabling reproducibility.
+	\end{itemize}
+	\onslide<2>{\begin{table}[H]
+		\centering
+		\caption{Experimental parameters.}
+		\vspace{-2.2ex}
+		\hfill\resizebox{\textwidth}{!}{%
+		\begin{tabular}{>{\ttfamily\itshape\small}l >{\ttfamily\small}l >{\small}l}
+			\toprule
+			\normalfont{\textbf{Parameter}} & \normalfont{\textbf{Values}} & \normalfont{\textbf{Description}} \\
+			\midrule
+			batch\_size & 32, 128, \textbf{512} & Batch size ($\beta$) \\
+			epochs & \textbf{100\_10x10}, 100\_4x25, 100\_1x100, 300\_10x30, 300\_4x75, 300\_1x300 & Local epochs per round ($\mathcal{E}$) \\
+			distribution & 10-0, 9-1, 7-3, \textbf{5-5}, 3-7 & Proportion of attackers ($\tau$) \\
+			scenario & continuous-\{10,30,60,70,80,90,95,99\}, \textbf{continuous-100}, late-3, redemption-3 & Poisoning rate per round ($\alpha$) \\
+			target & \textbf{untargeted}, bot, dos, ddos, bruteforce, infiltration, injection & Attack type and target\\
+			% partitioner &  iid\_drop\_1, iid\_drop\_2, iid\_full, iid\_keep\_1, kmeans\_drop\_1, kmeans\_drop\_2, kmeans\_full, kmeans\_keep\_1 \\
+			seed & 1313, 1977, 327, 5555, 501, 421, 3263827, 2187, 1138, 6567 & Seed for \acrshort{prng} \\
+			\bottomrule
+		\end{tabular}%
+		}
+		\vspace{1ex}
+
+		{\scriptsize 494 experiments $\times$ 10 seeds $\rightarrow$ 685 hours of computation.}%
+	\end{table}}
+\end{frame}
+
+\section{Experimental setup}
+
+\begin{frame}
+	\frametitle{Dataset}
 	\begin{columns}
 		\begin{column}{0.5\linewidth}
 			\begin{itemize}
@@ -251,15 +356,13 @@
 						\item 80\% of the dataset is used for training
 						\item 20\% of the dataset is used for testing
 				\end{itemize}
-				\only<3>{%
-					\item Assessment of the representativity of the dataset sampling
-					\begin{itemize}
-						\item Cross-projections of the malicious traffic from two datasets in two dimensions using PCA
-					\end{itemize}}
+				\only<2>{%
+					\item We ensure the representativity of the dataset sampling
+				}
 			\end{itemize}
 		\end{column}
 		\begin{column}{.5\linewidth}
-			\only<3>{\begin{figure}
+			\only<2>{\begin{figure}
 				\centering
 				\vspace{-4ex}
 				\includegraphics[width=.7\linewidth]{figures/pca-projection.pdf}
@@ -269,6 +372,8 @@
 	\end{columns}
 
 \end{frame}
+
+
 
 \begin{frame}
 \frametitle{Experimental setup}
@@ -285,17 +390,12 @@
         \item The dataset is partitioned into 10 \gls{iid} shards of 80,000 data points
         \item Models are aggregated using \texttt{FedAvg}
     \end{itemize}
-    \item Attack model
-    \begin{itemize}
-        \item Malicious participants can alter their local datasets before training
-        \item Data-poisoning: label-flipping attacks (targeted and untargeted)
-        \item \Gls{dpr}: ($\alpha$) $\rightarrow$ proportion of flipped samples
-        \item \Gls{mpr}: ($\tau$) $\rightarrow$ proportion of attackers
-    \end{itemize}
 \end{itemize}
 \end{frame}
 
-\section{RQ1: Predictability}
+\section{Results}
+
+\subsection{RQ1: Predictability}
 
 \begin{frame}
 \frametitle{RQ1: Is the behavior of poisoning attacks predictable?}
@@ -306,30 +406,43 @@
 \end{figure}
 \end{frame}
 
+% \begin{frame}
+% 	\frametitle{RQ1: Is the behavior of poisoning attacks predictable?}
+% 	\begin{figure}
+% 		\begin{columns}
+% 			\begin{column}{.2\textwidth}
+% 				\vspace{-\textheight}
+% 				\caption{Predictability depending on the hyperparameters.}
+% 			\end{column}
+% 			\begin{column}{.8\textwidth}
+% 				\includegraphics[width=\linewidth]{figures/predictability-envelopes.pdf}
+% 			\end{column}
+% 		\end{columns}
+% 	\end{figure}
+% \end{frame}
+
 \begin{frame}
 	\frametitle{RQ1: Is the behavior of poisoning attacks predictable?}
-	\begin{figure}
-		\begin{columns}
-			\begin{column}{.2\textwidth}
-				\vspace{-\textheight}
-				\caption{Predictability depending on the hyperparameters.}
-			\end{column}
-			\begin{column}{.8\textwidth}
-				\includegraphics[width=\linewidth]{figures/predictability-envelopes.pdf}
-			\end{column}
-		\end{columns}
-	\end{figure}
+
+	Short answer: \onslide<2->{Nope.}
+
+	\vspace{1\baselineskip}
+	\only<3>{
+		Long answer:
+
+		\begin{itemize}
+			\item Very high variance in the results
+			\item The impact of the attack is highly dependent on the seed
+			\begin{itemize}
+				\item[$\rightarrow$] Initial parameters, data shuffling, \dots
+			\end{itemize}
+			\item Results tend to stabilize after a few rounds on different values
+		\end{itemize}
+	}
+
 \end{frame}
 
-\begin{frame}
-\frametitle{RQ1: Is the behavior of poisoning attacks predictable?}
-\centering
-\vfill
-Answer: \onslide<2>{Nope.}
-\vfill
-\end{frame}
-
-\section{RQ2: Hyperparameters}
+\subsection{RQ2: Hyperparameters}
 
 \begin{frame}
 	\frametitle{RQ2: Do hyperparameters influence the effect of poisoning attacks?}
@@ -366,30 +479,7 @@ Answer:
 \end{itemize}
 \end{frame}
 
-\section{RQ3: Recovery}
-
-\begin{frame}
-	\frametitle{RQ3: Can FL heal itself from poisoning attacks?}
-	\begin{figure}
-		\centering
-		\includegraphics[width=.5\textwidth]{figures/redemption.pdf}
-		\caption{Recovery of the model after a poisoning attack.}
-	\end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{RQ3: Can FL heal itself from poisoning attacks?}
-Answer:
-\begin{itemize}
-	\item Yes.
-	\item Attack stopping $\Longleftrightarrow$ randomize initial parameters
-	\begin{itemize}
-		\item One round suffises to recover (in our settings).
-	\end{itemize}
-\end{itemize}
-\end{frame}
-
-\section{RQ4: Backdoors}
+\subsection{RQ4: Backdoors}
 
 	\begin{frame}
 	\frametitle{Appropriate metrics}
@@ -454,29 +544,13 @@ Answer:
 	\item Yes, but\dots\only<2>{
 	\item The model's generalization capabilities can mitigate the impact
 	\begin{itemize}
-		\item especially with class overlaps between characteristics
+		\item especially with characteristic overlaps between classes
 	\end{itemize}
 	\item The attack's effectiveness is highly dependent on the target
 	\item We need a significant number of attackers.
 	}
 \end{itemize}
 \end{frame}
-
-
-
-\section{RQ5: Threshold}
-
-\begin{frame}
-\frametitle{RQ5: Is there a critical threshold for label-flipping to be effective?}
-\vspace{-2ex}
-\begin{figure}
-	\centering
-	\includegraphics[width=.8\textwidth]{figures/attacks.pdf}
-	\vspace{-2ex}
-	\caption{Impact of $\tau$ and $\alpha$ on the attack's effectiveness.}
-\end{figure}
-\end{frame}
-
 
 
 \section{Conclusion}
@@ -487,32 +561,103 @@ Answer:
 We build a reproducible framework to study the impact of label-flipping attacks in \gls{fids} using \gls{fl}, here are our main findings (yet):
 
 \begin{itemize}
-    \item Label-flipping attacks can have a significant impact on the performance of FL models, especially targeted ones
-    \item The ASR is closely related to the number of flipped samples overall, which can be approximated in \gls{iid} settings by $\alpha * \tau$
-    \item Targeted label-flipping attacks strive on well-detected targets, but can be significantly mitigated by the model’s generalization capabilities
-    \item Mitigation strategies must be adapted to the use case specificities (e.g., constrained environments)
+    \item Label-flipping can be effective with enough attackers.
+    \item Targeted label-flipping strives on well-detected targets.
+		\begin{itemize}
+			\item but can be significantly mitigated by the model’s generalization capabilities and the use of aggregated classes.
+		\end{itemize}
+    \item Mitigation strategies must be adapted to the use case specificities (e.g., constrained environments).
 \end{itemize}
+\centering\vspace{2\baselineskip}
+$\rightarrow$ \small\emph{more detailed results in the paper}
 \end{frame}
+
+
 
 
 \begin{frame}
 	\frametitle{Future Work}
 	\begin{itemize}
-		\item Extend the study to other datasets. \only<2>{\textcolor{red}{[DONE!]}}
-		\item Study the impact of the data distribution on the ability to detect attacks. \only<2>{\textcolor{red}{[DONE!]}}
+		\item Extend the study to other datasets. \only<2>{\textcolor{red}{[DONE]}}
+		\item Study the impact of the data distribution on the ability to detect attacks using similarity metrics. \only<2>{\textcolor{red}{[DONE]}}
+		\item Build more appropriate metrics for the evaluation of poisoning attacks in \gls{niid} settings.
 		\item Extend to other feature sets and poisoning attacks.
-		\begin{itemize}
+		\only<2>{\begin{itemize}
 			\item Our evaluation framework is generic enough (and open source!) to make extending the results easy.
-		\end{itemize}
+		\end{itemize}}
 	\end{itemize}
-	\vspace{3\baselineskip}
-	\begin{center}
-		\only<2>{\emph{
-			Want to know about the new results? I defend my thesis on \textbf{October 7th, 2024} at \textbf{14:00} in \textbf{Rennes}. You are welcome to join!
-			}}
-			
-		\end{center}
-	\end{frame}
-	
+
+	% \vspace{3\baselineskip}
+	% \begin{center}
+	% 	\only<2>{\emph{
+	% 		Want to know about the new results? I defend my thesis on \textbf{October 7th, 2024} at \textbf{14:00} in \textbf{Rennes}. You are welcome to join!
+	% 	}}
+	% \end{center}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+	\frametitle{References}
+	\printbibliography
+\end{frame}
+
+\begin{frame}
+	\frametitle{Thank you!}
+	\vspace{1ex}
+
+	\begin{itemize}
+		\item Consider the use case when designing mitigations.
+		\item Expect the unexpected: the behavior of poisoning attacks is unpredictable.
+		\item Try it yourself! Our work is \emph{reproducible} and everything is in \emph{open-access}!
+	\end{itemize}\vspace{2ex}
+
+	\begin{columns}
+		\hfil\hfil
+		\begin{column}{.25\textwidth}
+			\centering
+			\small Paper\\
+			\includegraphics[width=.8\linewidth]{figures/qr-paper.png}
+		\end{column}
+		\hfil
+		\begin{column}{.25\textwidth}
+			\centering
+			\small Results\\
+			\includegraphics[width=.8\linewidth]{figures/qr-results.png}
+		\end{column}
+		\hfil\hfil
+		\begin{column}{.25\textwidth}
+			\centering
+			\small Evaluation framework\\
+			\includegraphics[width=.8\linewidth]{figures/qr-eiffel.png}
+		\end{column}
+	\end{columns}
+	\vspace{4ex}
+	\centering\Large Any questions?
+
+
+\end{frame}
+
+\section*{Appendix}
+
+\begin{frame}
+	\frametitle{RQ3: Can FL heal itself from poisoning attacks?}
+	\begin{figure}
+		\centering
+		\includegraphics[width=.5\textwidth]{figures/redemption.pdf}
+		\caption{Recovery of the model after a poisoning attack.}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{RQ5: Is there a critical threshold for label-flipping to be effective?}
+
+	\vspace{-2ex}
+	\begin{figure}
+		\centering
+		\includegraphics[width=.8\textwidth]{figures/attacks.pdf}
+		\vspace{-2ex}
+		\caption{Impact of $\tau$ and $\alpha$ on the attack's effectiveness.}
+	\end{figure}
+
+\end{frame}
 	
 \end{document}

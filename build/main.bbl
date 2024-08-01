@@ -16,5 +16,576 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{mcmahan_Communicationefficientlearningdeep_2017}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=be349ac63090285fa87303a55d511957}{%
+           family={McMahan},
+           familyi={M\bibinitperiod},
+           given={Brendan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=4720b7685b2c38f8a5f238d67aac6c45}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={Eider},
+           giveni={E\bibinitperiod}}}%
+        {{hash=86066638fba5b4dc33bcee0bcba473cf}{%
+           family={Ramage},
+           familyi={R\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=bd7751169aeb03f0e8ce6fd2a06822d3}{%
+           family={Hampson},
+           familyi={H\bibinitperiod},
+           given={Seth},
+           giveni={S\bibinitperiod}}}%
+        {{useprefix=false,hash=f055a5e7ef3fad90289ae0061819e058}{%
+           family={Arcas},
+           familyi={A\bibinitperiod},
+           given={Blaise\bibnamedelima Aguera},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod},
+           prefix={y},
+           prefixi={y\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=d77c73a14b0f048484c1d34aba3071d4}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Aarti},
+           giveni={A\bibinitperiod}}}%
+        {{hash=39c902c926e80826b55032878c4a4b49}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Jerry},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{dd391108ee0ea107656d855371e36f69}
+      \strng{fullhash}{6b8be53c02a59438baf3c27c0b389e79}
+      \strng{bibnamehash}{6b8be53c02a59438baf3c27c0b389e79}
+      \strng{authorbibnamehash}{6b8be53c02a59438baf3c27c0b389e79}
+      \strng{authornamehash}{dd391108ee0ea107656d855371e36f69}
+      \strng{authorfullhash}{6b8be53c02a59438baf3c27c0b389e79}
+      \strng{editorbibnamehash}{76ce338934df3b777883645db0b56555}
+      \strng{editornamehash}{76ce338934df3b777883645db0b56555}
+      \strng{editorfullhash}{76ce338934df3b777883645db0b56555}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Modern mobile devices have access to a wealth of data suitable for learning models, which in turn can greatly improve the user experience on the device. For example, language models can improve speech recognition and text entry, and image models can automatically select good photos. However, this rich data is often privacy sensitive, large in quantity, or both, which may preclude logging to the data center and training there using conventional approaches. We advocate an alternative that leaves the training data distributed on the mobile devices, and learns a shared model by aggregating locally-computed updates. We term this decentralized approach Federated Learning. We present a practical method for the federated learning of deep networks based on iterative model averaging, and conduct an extensive empirical evaluation, considering five different model architectures and four datasets. These experiments demonstrate the approach is robust to the unbalanced and non-IID data distributions that are a defining characteristic of this setting. Communication costs are the principal constraint, and we show a reduction in required communication rounds by 10-100x as compared to synchronized stochastic gradient descent.}
+      \field{booktitle}{Proceedings of the 20th International Conference on Artificial Intelligence and Statistics}
+      \field{day}{20}
+      \field{endday}{22}
+      \field{endmonth}{4}
+      \field{endyear}{2017}
+      \field{month}{4}
+      \field{series}{Proceedings of Machine Learning Research}
+      \field{title}{Communication-Efficient Learning of Deep Networks from Decentralized Data}
+      \field{volume}{54}
+      \field{year}{2017}
+      \field{enddateera}{ce}
+      \field{dateera}{ce}
+      \field{pages}{1273\bibrangedash 1282}
+      \range{pages}{10}
+      \verb{urlraw}
+      \verb https://proceedings.mlr.press/v54/mcmahan17a.html
+      \endverb
+      \verb{url}
+      \verb https://proceedings.mlr.press/v54/mcmahan17a.html
+      \endverb
+    \endentry
+    \entry{lavaur_tnsm_2022}{article}{}
+      \name{author}{4}{}{%
+        {{hash=f7af461e4e234ac88ce1e65c37944a33}{%
+           family={Lavaur},
+           familyi={L\bibinitperiod},
+           given={Léo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=8828c4cf5faefcb7f0157ee50e618a6f}{%
+           family={Pahl},
+           familyi={P\bibinitperiod},
+           given={Marc-Oliver},
+           giveni={M\bibinithyphendelim O\bibinitperiod}}}%
+        {{hash=f0bfb9464fd04350ddf819db868053a7}{%
+           family={Busnel},
+           familyi={B\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=428f1e21fb14bf299127cb7ef544d632}{%
+           family={Autrel},
+           familyi={A\bibinitperiod},
+           given={Fabien},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{c4d477d6f37067bf7a7a0130fc348c03}
+      \strng{fullhash}{aa91393332008a7aa837ff732866a283}
+      \strng{bibnamehash}{aa91393332008a7aa837ff732866a283}
+      \strng{authorbibnamehash}{aa91393332008a7aa837ff732866a283}
+      \strng{authornamehash}{c4d477d6f37067bf7a7a0130fc348c03}
+      \strng{authorfullhash}{aa91393332008a7aa837ff732866a283}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In 2016, Google introduced the concept of Federated Learning (FL), enabling collaborative Machine Learning (ML). FL does not share local data but ML models, offering applications in diverse domains. This paper focuses on the application of FL to Intrusion Detection Systems (IDSs). There, common criteria to compare existing solutions are missing. In particular, this survey shows: (i) how FL-based IDSs are used in different domains; (ii) what differences exist between architectures; (iii) the state of the art of FL-based IDS. With a structured literature survey, this work identifies the relevant state of the art in FL--based intrusion detection from its creation in 2016 until 2021. It provides a reference architecture and a taxonomy to serve as guidelines to compare and design FL- based IDSs. Both are validated with the existing works. Finally, it identifies research directions for the application of FL to intrusion detection systems.}
+      \field{journaltitle}{IEEE Transactions on Network and Service Management}
+      \field{month}{6}
+      \field{series}{Special {{Issue}} on {{Network Security Management}}}
+      \field{shortjournal}{TNSM}
+      \field{title}{The {{Evolution}} of {{Federated Learning-based Intrusion Detection}} and {{Mitigation}}: A {{Survey}}}
+      \field{year}{2022}
+      \field{dateera}{ce}
+    \endentry
+    \entry{lavaur_icdcs_demo_2024}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=f7af461e4e234ac88ce1e65c37944a33}{%
+           family={Lavaur},
+           familyi={L\bibinitperiod},
+           given={Léo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=f0bfb9464fd04350ddf819db868053a7}{%
+           family={Busnel},
+           familyi={B\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=428f1e21fb14bf299127cb7ef544d632}{%
+           family={Autrel},
+           familyi={A\bibinitperiod},
+           given={Fabien},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Jersey City, NJ, USA}%
+      }
+      \strng{namehash}{ad9503780d61af6ba38489de94e1543b}
+      \strng{fullhash}{ad9503780d61af6ba38489de94e1543b}
+      \strng{bibnamehash}{ad9503780d61af6ba38489de94e1543b}
+      \strng{authorbibnamehash}{ad9503780d61af6ba38489de94e1543b}
+      \strng{authornamehash}{ad9503780d61af6ba38489de94e1543b}
+      \strng{authorfullhash}{ad9503780d61af6ba38489de94e1543b}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 44th International Conference on Distributed Computing Systems ({{ICDCS}})}
+      \field{month}{7}
+      \field{title}{Demo: {{Highlighting}} the Limits of Federated Learning in Intrusion Detection}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \keyw{confs}
+    \endentry
+    \entry{tolpegin_DataPoisoningAttacks_2020}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=57181d9e60e23bee3f2db140a2cd1e08}{%
+           family={Tolpegin},
+           familyi={T\bibinitperiod},
+           given={Vale},
+           giveni={V\bibinitperiod}}}%
+        {{hash=06094ef486a3fc7a6fca064e8739144e}{%
+           family={Truex},
+           familyi={T\bibinitperiod},
+           given={Stacey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=bfeda26fff65371e2c4ff231ae17b7a6}{%
+           family={Gursoy},
+           familyi={G\bibinitperiod},
+           given={Mehmet\bibnamedelima Emre},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=1c17a20c4acfa6f32b73321fc505433b}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Ling},
+           giveni={L\bibinitperiod}}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=f469b01c091ec9c602a5fe895f64dc71}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Liqun},
+           giveni={L\bibinitperiod}}}%
+        {{hash=3ab7a15935d7d7bbbf292c3407adc036}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Ninghui},
+           giveni={N\bibinitperiod}}}%
+        {{hash=0b2e555904a51fcf14cb334b659f8afb}{%
+           family={Liang},
+           familyi={L\bibinitperiod},
+           given={Kaitai},
+           giveni={K\bibinitperiod}}}%
+        {{hash=807402dc704847ec817ce1e776cd3b46}{%
+           family={Schneider},
+           familyi={S\bibinitperiod},
+           given={Steve},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{b1cff6adbcac818249a328b73424d5d7}
+      \strng{fullhash}{63da603371e48d340cd00757d8adefa8}
+      \strng{bibnamehash}{63da603371e48d340cd00757d8adefa8}
+      \strng{authorbibnamehash}{63da603371e48d340cd00757d8adefa8}
+      \strng{authornamehash}{b1cff6adbcac818249a328b73424d5d7}
+      \strng{authorfullhash}{63da603371e48d340cd00757d8adefa8}
+      \strng{editorbibnamehash}{2c2100c39cff146acaf332c4febf6c55}
+      \strng{editornamehash}{95620e9d4bb9ab459f9078d5e27bc564}
+      \strng{editorfullhash}{2c2100c39cff146acaf332c4febf6c55}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Federated learning (FL) is an emerging paradigm for distributed training of large-scale deep neural networks in which participants' data remains on their own devices with only model updates being shared with a central server. However, the distributed nature of FL gives rise to new threats caused by potentially malicious participants. In this paper, we study targeted data poisoning attacks against FL systems in which a malicious subset of the participants aim to poison the global model by sending model updates derived from mislabeled data. We first demonstrate that such data poisoning attacks can cause substantial drops in classification accuracy and recall, even with a small percentage of malicious participants. We additionally show that the attacks can be targeted, i.e., they have a large negative impact only on classes that are under attack. We also study attack longevity in early/late round training, the impact of malicious participant availability, and the relationships between the two. Finally, we propose a defense strategy that can help identify malicious participants in FL to circumvent poisoning attacks, and demonstrate its effectiveness.}
+      \field{booktitle}{Computer {{Security}} -- {{ESORICS}} 2020}
+      \field{isbn}{978-3-030-58951-6}
+      \field{langid}{english}
+      \field{series}{Lecture {{Notes}} in {{Computer Science}}}
+      \field{title}{Data {{Poisoning Attacks Against Federated Learning Systems}}}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{pages}{480\bibrangedash 501}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1007/978-3-030-58951-6_24
+      \endverb
+      \keyw{Adversarial machine learning,Data poisoning,Deep learning,Federated learning,Label flipping,obsidian}
+    \endentry
+    \entry{vy_FederatedLearningBasedIntrusion_2021}{incollection}{}
+      \name{author}{4}{}{%
+        {{hash=2b397f7f320ba08f6763b7bf0e8143e8}{%
+           family={Vy},
+           familyi={V\bibinitperiod},
+           given={Nguyen\bibnamedelima Chi},
+           giveni={N\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=9839ca71eda4bd2bb054671707fdd53e}{%
+           family={Quyen},
+           familyi={Q\bibinitperiod},
+           given={Nguyen\bibnamedelima Huu},
+           giveni={N\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=ea28ec256da752a2ca1097d918f7f563}{%
+           family={Duy},
+           familyi={D\bibinitperiod},
+           given={Phan\bibnamedelima The},
+           giveni={P\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=47eb916b65c79df11192a3745466c30b}{%
+           family={Pham},
+           familyi={P\bibinitperiod},
+           given={Van-Hau},
+           giveni={V\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=feb96ca112c179e320db2db693e022b8}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Min},
+           giveni={M\bibinitperiod}}}%
+        {{hash=531c7be3c2524682e36a7baa8d7ab92f}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Chao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=621013bf54d3546375ad71f17f020b5b}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{1fd148f458a27257bb08e083c716bc1b}
+      \strng{fullhash}{a9b58c7d3cacb55fa69a4a97d659eb87}
+      \strng{bibnamehash}{a9b58c7d3cacb55fa69a4a97d659eb87}
+      \strng{authorbibnamehash}{a9b58c7d3cacb55fa69a4a97d659eb87}
+      \strng{authornamehash}{1fd148f458a27257bb08e083c716bc1b}
+      \strng{authorfullhash}{a9b58c7d3cacb55fa69a4a97d659eb87}
+      \strng{editorbibnamehash}{d35c2b25f630ec142c9f512f7a51b988}
+      \strng{editornamehash}{d35c2b25f630ec142c9f512f7a51b988}
+      \strng{editorfullhash}{d35c2b25f630ec142c9f512f7a51b988}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The emerging of Federated Learning (FL) paradigm in training has been drawn much attention from research community because of the demand of privacy preservation in widespread machine learning adoption. This is more serious in the context of industrial Internet of Things (IIoT) with the distributed data resources and the sensitive local data in each data owner. FL in IIoT context can help to ensure the sensitive data from being exploited by adversaries while facilitating the acceptable performance by aggregating additional knowledge from distributed collaborators. Sharing the similar trend, Intrusion detection system (IDS) leveraging the FL approach can encourage the cooperation in building an efficient privacy-preserving solution among multiple participants owning the sensitive network data. But a rogue collaborator can manipulate the local dataset and send malicious updates to the model aggregation, aiming to reduce the global model's prediction accuracy rate. The reason for this case is that the collaborator is a compromised participant, or due to the weak defenses of the local training device. This paper introduces a FL-based IDS, named Fed-IDS which facilitates collaborative training between many organizations to enhance their robustness against diverse and unknown attacks in the context of IIoT. Next, we perform the poisoning attack against such an IDS, including label-flipping strategy and Generative Adversarial Networks (GANs). Then, a validation approach is utilized as a countermeasure of rejecting the malicious updates to protect the global model from poisoning attacks. The experiments conducted on Kitsune, a real-world attack dataset, demonstrate the high effectiveness of the validation function in Fed-IDS framework against data poisoning.}
+      \field{booktitle}{Network and {{System Security}}}
+      \field{isbn}{978-3-030-92707-3 978-3-030-92708-0}
+      \field{langid}{english}
+      \field{shorttitle}{Federated {{Learning-Based Intrusion Detection}} in the {{Context}} of {{IIoT Networks}}}
+      \field{title}{Federated {{Learning-Based Intrusion Detection}} in the {{Context}} of {{IIoT Networks}}: {{Poisoning Attack}} and {{Defense}}}
+      \field{urlday}{5}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{volume}{13041}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{131\bibrangedash 147}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1007/978-3-030-92708-0_8
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/10.1007/978-3-030-92708-0_8
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/10.1007/978-3-030-92708-0_8
+      \endverb
+    \endentry
+    \entry{yang_Dependablefederatedlearning_2023}{article}{}
+      \name{author}{5}{}{%
+        {{hash=492ad9267cd6522ecfec2493a137dafb}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Run},
+           giveni={R\bibinitperiod}}}%
+        {{hash=36e14317cce7922c17acb473f6578607}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Hui},
+           giveni={H\bibinitperiod}}}%
+        {{hash=27385c2e45c9a78593db972112c0895a}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yulong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=8f9f25e47e6a629ce89527a033292063}{%
+           family={Qu},
+           familyi={Q\bibinitperiod},
+           given={Yue},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=0b5a2b62fe0d5ee49965c8b5efc0de1b}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Weizhe},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{994a7a86d4493dcd930d5d22342d3e15}
+      \strng{fullhash}{63ff49aabe1a08a4bc16f8109adb3950}
+      \strng{bibnamehash}{63ff49aabe1a08a4bc16f8109adb3950}
+      \strng{authorbibnamehash}{63ff49aabe1a08a4bc16f8109adb3950}
+      \strng{authornamehash}{994a7a86d4493dcd930d5d22342d3e15}
+      \strng{authorfullhash}{63ff49aabe1a08a4bc16f8109adb3950}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Network intrusion detection methods based on federated learning (FL) and edge computing have great potential for protecting the cybersecurity of the Internet of Things. It overcomes the disadvantages of the traditional centralized method, such as high latency, overloaded network, and privacy leakage. At the same time, it can combine private data from multiple participants to train models, and the rich data can train more effective models. However, the inherent security vulnerabilities of the FL framework do not ensure the robustness of the global models trained collaboratively. Towards FL, each participant has access to model parameters and training data, and malicious participants can affect the global model by tampering with data or weights. This paper studies label-flipping attacks in FL-based IoT intrusion detection. We propose a lightweight detection mechanism to mitigate the impact of poisoning attacks on FL-based intrusion detection methods in IoT networks. The detection mechanism on a central server filters anomalous participants and excludes their uploaded models from the global model aggregation. Specifically, we propose a scoring mechanism for evaluating participants based on the loss of the local model and the training dataset size. Afterwards, the Manhattan similarity between each participant will be calculated according to the scores. Finally, the anomalous participants will be found by clustering algorithm for similarity cluster analysis. The experimental results show that our proposed detection method can defend against label-flipping attacks in FL. On the CIC-IDS-2017 dataset, our method can improve the accuracy of the intrusion detection model trained based on FL from 84.3\% to 97.1\%, while enhancing the protection of IoT network security.}
+      \field{day}{1}
+      \field{issn}{0167-4048}
+      \field{journaltitle}{Computers \& Security}
+      \field{month}{9}
+      \field{shortjournal}{Computers \& Security}
+      \field{title}{Dependable Federated Learning for {{IoT}} Intrusion Detection against Poisoning Attacks}
+      \field{urlday}{4}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{volume}{132}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{103381}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.cose.2023.103381
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0167404823002912
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0167404823002912
+      \endverb
+      \keyw{Cyber-physical systems,Federated learning,Internet of thing,Label-flipping attacks,Network intrusion detection,obsidian}
+    \endentry
+    \entry{zhang_Evaluationdatapoisoning_2022}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=1a793f8fe4730800f4680d5474e207d4}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yuemeng},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=2c81656c924858824dfb10d50423b77a}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=56bda333ab85070cdf1934ac222e12aa}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Zhao},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=57062767dbf5578dd6348f208ad7a88b}{%
+           family={Bai},
+           familyi={B\bibinitperiod},
+           given={Haonan},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c195157d605ef0e59507c552302545a0}{%
+           family={Zhong},
+           familyi={Z\bibinitperiod},
+           given={Tianyi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=1aa2bfb9cde8563f946a3a3e037108c1}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Mei},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{43bcdc25d8c0357b422cf7b6ec22c803}
+      \strng{fullhash}{b85bea7b1225b1fa1223157a15d40040}
+      \strng{bibnamehash}{b85bea7b1225b1fa1223157a15d40040}
+      \strng{authorbibnamehash}{b85bea7b1225b1fa1223157a15d40040}
+      \strng{authornamehash}{43bcdc25d8c0357b422cf7b6ec22c803}
+      \strng{authorfullhash}{b85bea7b1225b1fa1223157a15d40040}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Recently, federated learning-based network intrusion detection system (FL-based NIDS) has been considered as an essential tool to protect network security. It enables learning an effective intrusion detection model collaboratively without data privacy leakage. However, FL- based NIDS has exhibited inherent vulnerabilities on the data poisoning attacks launched by malicious clients. In this paper, we conduct the first systematic robustness evaluations of FL-based NIDS under data poisoning attack. Firstly, in consideration of the traffic domain constraints, we design the clean-label data poisoning attack against FL-based NIDS. Specifically, we propose an improved poisoned sample generation model based on Generative Adversarial Network, called PT-GAN, which optimizes with a new loss function that incorporates the feedback of the target intrusion detection model. The minimally-perturbed and correctly-labeled traffic samples generated by PT-GAN are then injected in the local training dataset to corrupt the intrusion detection model. Then, we explore the potential defense mechanism for these data poisoning attacks against FL- based NIDS and propose a novel defense method based on poisoned sample detection. Concretely, we propose the important neuron activations extraction method based on the layerwise relevance propagation method and then apply Oneclass-SVM to detect the poisoned sample. Experiments show that the proposed PT-GAN can degrade the performance of FL-based NIDS up to 28\% on UNSW-NB15 dataset. We also demonstrate the robustness of our proposed defense methods against data poisoning attacks.}
+      \field{booktitle}{2022 {{IEEE}} 24th {{Int Conf}} on {{High Performance Computing}} \& {{Communications}}; 8th {{Int Conf}} on {{Data Science}} \& {{Systems}}; 20th {{Int Conf}} on {{Smart City}}; 8th {{Int Conf}} on {{Dependability}} in {{Sensor}}, {{Cloud}} \& {{Big Data Systems}} \& {{Application}} ({{HPCC}}/{{DSS}}/{{SmartCity}}/{{DependSys}})}
+      \field{eventtitle}{2022 {{IEEE}} 24th {{Int Conf}} on {{High Performance Computing}} \& {{Communications}}; 8th {{Int Conf}} on {{Data Science}} \& {{Systems}}; 20th {{Int Conf}} on {{Smart City}}; 8th {{Int Conf}} on {{Dependability}} in {{Sensor}}, {{Cloud}} \& {{Big Data Systems}} \& {{Application}} ({{HPCC}}/{{DSS}}/{{SmartCity}}/{{DependSys}})}
+      \field{month}{12}
+      \field{title}{Evaluation of Data Poisoning Attacks on Federated Learning-Based Network Intrusion Detection System}
+      \field{urlday}{31}
+      \field{urlmonth}{10}
+      \field{urlyear}{2023}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{2235\bibrangedash 2242}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/HPCC-DSS-SmartCity-DependSys57074.2022.00330
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10074658
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10074658
+      \endverb
+    \endentry
+    \entry{beutel_Flowerfriendlyfederated_2020}{unpublished}{}
+      \name{author}{6}{}{%
+        {{hash=7bf2d912026dfd8e881264db28949c3b}{%
+           family={Beutel},
+           familyi={B\bibinitperiod},
+           given={Daniel\bibnamedelima J},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=608177426325ccad5b56907cf6b57beb}{%
+           family={Topal},
+           familyi={T\bibinitperiod},
+           given={Taner},
+           giveni={T\bibinitperiod}}}%
+        {{hash=457cd19c088f0576b2d4d9823277fe38}{%
+           family={Mathur},
+           familyi={M\bibinitperiod},
+           given={Akhil},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2f1ad1aba74450f81e00f8a377c6e082}{%
+           family={Qiu},
+           familyi={Q\bibinitperiod},
+           given={Xinchi},
+           giveni={X\bibinitperiod}}}%
+        {{hash=349c6249e40230069088b98c40bdf16f}{%
+           family={Parcollet},
+           familyi={P\bibinitperiod},
+           given={Titouan},
+           giveni={T\bibinitperiod}}}%
+        {{hash=0178a10937afeee8b3947b80841a4c65}{%
+           family={Lane},
+           familyi={L\bibinitperiod},
+           given={Nicholas\bibnamedelima D},
+           giveni={N\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{b0b83a4a3cece87bdd8b45795f12e826}
+      \strng{fullhash}{41ce690ebe25a122ba0fc5a5d895c7c1}
+      \strng{bibnamehash}{41ce690ebe25a122ba0fc5a5d895c7c1}
+      \strng{authorbibnamehash}{41ce690ebe25a122ba0fc5a5d895c7c1}
+      \strng{authornamehash}{b0b83a4a3cece87bdd8b45795f12e826}
+      \strng{authorfullhash}{41ce690ebe25a122ba0fc5a5d895c7c1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{title}{Flower: {{A}} Friendly Federated Learning Research Framework}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{eprint}
+      \verb 2007.14390
+      \endverb
+      \keyw{⛔ No DOI found}
+    \endentry
+    \entry{Hydra}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=0c7d3557b383c6e62dcc2b94cc7612b5}{%
+           family={Yadan},
+           familyi={Y\bibinitperiod},
+           given={Omry},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{0c7d3557b383c6e62dcc2b94cc7612b5}
+      \strng{fullhash}{0c7d3557b383c6e62dcc2b94cc7612b5}
+      \strng{bibnamehash}{0c7d3557b383c6e62dcc2b94cc7612b5}
+      \strng{authorbibnamehash}{0c7d3557b383c6e62dcc2b94cc7612b5}
+      \strng{authornamehash}{0c7d3557b383c6e62dcc2b94cc7612b5}
+      \strng{authorfullhash}{0c7d3557b383c6e62dcc2b94cc7612b5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Github}
+      \field{title}{Hydra - {{A}} Framework for Elegantly Configuring Complex Applications}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/facebookresearch/hydra
+      \endverb
+      \verb{url}
+      \verb https://github.com/facebookresearch/hydra
+      \endverb
+      \keyw{pinned}
+    \endentry
+    \entry{dolstra_purelyfunctionalsoftware_2006}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=a3e96caa8e2128d249c9bae69079bc78}{%
+           family={Dolstra},
+           familyi={D\bibinitperiod},
+           given={Eelco},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {s.n.}%
+      }
+      \list{location}{1}{%
+        {S.l.}%
+      }
+      \strng{namehash}{a3e96caa8e2128d249c9bae69079bc78}
+      \strng{fullhash}{a3e96caa8e2128d249c9bae69079bc78}
+      \strng{bibnamehash}{a3e96caa8e2128d249c9bae69079bc78}
+      \strng{authorbibnamehash}{a3e96caa8e2128d249c9bae69079bc78}
+      \strng{authornamehash}{a3e96caa8e2128d249c9bae69079bc78}
+      \strng{authorfullhash}{a3e96caa8e2128d249c9bae69079bc78}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{OCLC: 71702886}
+      \field{langid}{english}
+      \field{title}{The Purely Functional Software Deployment Model}
+      \field{year}{2006}
+      \field{dateera}{ce}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

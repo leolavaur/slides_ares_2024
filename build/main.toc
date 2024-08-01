@@ -1,8 +1,8 @@
 \babel@toc {english}{}\relax 
-\beamer@sectionintoc {1}{Experiments}{15}{0}{1}
-\beamer@sectionintoc {2}{RQ1: Predictability}{21}{0}{2}
-\beamer@sectionintoc {3}{RQ2: Hyperparameters}{26}{0}{3}
-\beamer@sectionintoc {4}{RQ3: Recovery}{30}{0}{4}
-\beamer@sectionintoc {5}{RQ4: Backdoors}{33}{0}{5}
-\beamer@sectionintoc {6}{RQ5: Threshold}{38}{0}{6}
-\beamer@sectionintoc {7}{Conclusion}{40}{0}{7}
+\beamer@sectionintoc {1}{Methodology and Research Questions}{20}{0}{1}
+\beamer@sectionintoc {2}{Experimental setup}{28}{0}{2}
+\beamer@sectionintoc {3}{Results}{32}{0}{3}
+\beamer@subsectionintoc {3}{1}{RQ1: Predictability}{33}{0}{3}
+\beamer@subsectionintoc {3}{2}{RQ2: Hyperparameters}{37}{0}{3}
+\beamer@subsectionintoc {3}{3}{RQ4: Backdoors}{40}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{44}{0}{4}
