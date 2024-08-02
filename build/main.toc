@@ -1,5 +1,5 @@
 \babel@toc {english}{}\relax 
-\beamer@sectionintoc {1}{Methodology and Research Questions}{20}{0}{1}
-\beamer@sectionintoc {2}{Experimental setup}{28}{0}{2}
-\beamer@sectionintoc {3}{Results}{34}{0}{3}
-\beamer@sectionintoc {4}{Conclusion}{45}{0}{4}
+\beamer@sectionintoc {1}{Methodology and Research Questions}{19}{0}{1}
+\beamer@sectionintoc {2}{Experimental setup}{25}{0}{2}
+\beamer@sectionintoc {3}{Results}{29}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{36}{0}{4}

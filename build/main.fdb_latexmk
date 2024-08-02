@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber /Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main"] 1722508926.18147 "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.bcf" "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.bbl" "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main" 1722518464.89886 0
-  "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.bcf" 1722518464.58851 109798 edb69d505c2f11fd3673e296674c5a38 "lualatex"
+["biber /Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main"] 1722592575.81538 "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.bcf" "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.bbl" "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main" 1722601196.9452 0
+  "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.bcf" 1722601196.65397 109875 c4c2cdad35ff50dac3d543363882932b "lualatex"
   "own.bib" 1722439392.98176 1755280 4430fec90a6d824fe6a0f67ca5767947 ""
   "references.bib" 1720743251.47549 1733972 0381583f166ea7e2400189a7ef06cdfa ""
   (generated)
   "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.bbl"
   "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.blg"
   (rewritten before read)
-["lualatex"] 1722518459.52885 "/Users/leo/Workspace/phdcybersec/slides_ares_2024/src/main.tex" "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.pdf" "main" 1722518464.89913 0
+["lualatex"] 1722601192.18382 "/Users/leo/Workspace/phdcybersec/slides_ares_2024/src/main.tex" "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.pdf" "main" 1722601196.94547 0
   "/Users/leo/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/arial-bold-italic.luc" 1720691441.27131 417143 e34bab3cc24b454509105eaf1f886a40 ""
   "/Users/leo/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/arial-bold.luc" 1720691441.38622 536225 9a6f9fb6893879542de3c870220fdbfa ""
   "/Users/leo/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/arial-italic.luc" 1720691441.47898 416927 9198e4ef773027cdd7c301f7977ddc1b ""
@@ -26,13 +26,13 @@
   "/Users/leo/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/lmsans8-regular.luc" 1722355780.65687 127605 1c8e25cb668b06940c1fdee04a4dac49 ""
   "/Users/leo/.texlive2023/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1722433717.39954 13522 dda5c282165dd2ee904c3db74cae0c8b ""
   "/Users/leo/.texlive2023/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1720215500.69143 411018 1cb0af858ee124621b500798b33d3334 ""
-  "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.aux" 1722518464.5777 16272 cced15256d822696daacf9e9c86fbe26 "lualatex"
-  "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.bbl" 1722508929.19298 32013 63369a532c1243d51547ee2e218e1136 "biber /Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main"
-  "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.nav" 1722518464.58949 4148 ccddcc462a975fe9d0ecaad9166a0f12 "lualatex"
-  "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.out" 1722518464.58525 705 6fc0fd5879c6256a213491ecaad3a3bc "lualatex"
-  "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.run.xml" 1722518464.58942 2464 328fdcc344587ea598135c2d52fa2554 "lualatex"
-  "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.toc" 1722518464.58955 247 26d51aa80ca117c9747ef14ccdca6fb1 "lualatex"
-  "/Users/leo/Workspace/phdcybersec/slides_ares_2024/src/main.tex" 1722518459.30411 19846 b1451d08043f5f7c3a898e7f4bff999a ""
+  "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.aux" 1722601196.64381 15162 0a4c47774b540718d3fa53ece2ea264a "lualatex"
+  "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.bbl" 1722592578.81757 28368 c3516c3f2989dcd7ea897d25c8bd9e8a "biber /Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main"
+  "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.nav" 1722601196.65471 3872 293d30349d6272f68227c2833b307c58 "lualatex"
+  "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.out" 1722601196.65086 705 6fc0fd5879c6256a213491ecaad3a3bc "lualatex"
+  "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.run.xml" 1722601196.65464 2464 328fdcc344587ea598135c2d52fa2554 "lualatex"
+  "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.toc" 1722601196.65473 247 23554741a359844de715eaee6e0c040b "lualatex"
+  "/Users/leo/Workspace/phdcybersec/slides_ares_2024/src/main.tex" 1722601187.22584 19620 ebcfc0024bc4c9b20bc274c1806fac19 ""
   "/nix/store/3f00l16z7vpdflrmk2rn1gq8a0ilx4pi-texlive-2023-env/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1 5467731 57498ad50655f6eb7c738b4bef0a7a91 ""
   "/nix/store/3f00l16z7vpdflrmk2rn1gq8a0ilx4pi-texlive-2023-env/share/texmf-var/tex/generic/config/language.dat" 1 6798 37c61fc495ceb734c1cb83376784be4e ""
   "/nix/store/3f00l16z7vpdflrmk2rn1gq8a0ilx4pi-texlive-2023-env/share/texmf-var/web2c/luahbtex/lualatex.fmt" 1 12262292 b7a04b1be577d92a0d8d7b5a6405955a ""
@@ -423,7 +423,6 @@
   "figures/hyperparams-continous-cicids-small.pdf" 1720777805.05345 70163 83560014c01819a7babb4da7d6f6ce81 ""
   "figures/hyperparams-late.pdf" 1720778183.19382 49879 f2943179cfe94e5251418cd87410f7c3 ""
   "figures/mlp-workflow.pdf" 1720767858.03362 194882 ffdd25daae32783b2e4b55c302de847a ""
-  "figures/pca-projection.pdf" 1720774664.62282 69297 2badd500425d9092507ba919479e9fb7 ""
   "figures/predictability-all.pdf" 1720774628.73085 76067 5c3087956b34b6599eeafc691939d02a ""
   "figures/qr-eiffel.png" 1722504848.18923 71460 70055628a3852eb8f3bde9dc350cd2c4 ""
   "figures/qr-paper.png" 1722504848.20406 77108 3a9567600f87f196f8eff9f4c284e4d8 ""
@@ -435,7 +434,7 @@
   "imtatlantiquelogo.png" 1720691445.44341 71084 94e95fe8b08fd723cc8d93e1ad9a12bc ""
   "logo_cc_by_nc_sa.png" 1720691445.44355 1813 39119df78331a72cf1381b7b25650036 ""
   "logosansfondimtatlantique.png" 1720691445.44384 14756 b42ede1fc17ee3c0cb358d18bd9e9e81 ""
-  "main.tex" 1722518459.30411 19846 b1451d08043f5f7c3a898e7f4bff999a ""
+  "main.tex" 1722601187.22584 19620 ebcfc0024bc4c9b20bc274c1806fac19 ""
   (generated)
   "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.aux"
   "/Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.bcf"

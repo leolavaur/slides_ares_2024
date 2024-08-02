@@ -465,7 +465,6 @@ INPUT ./figures/fl-poisoning-4.pdf
 INPUT ./figures/fl-poisoning-5.pdf
 INPUT ./figures/fl-poisoning-5.pdf
 INPUT ./figures/fl-poisoning-5.pdf
-INPUT ./figures/fl-poisoning-5.pdf
 INPUT /Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.toc
 INPUT ./logosansfondimtatlantique.png
 INPUT ./logosansfondimtatlantique.png
@@ -478,8 +477,6 @@ INPUT /Users/leo/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/lmmonolt1
 INPUT /Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.toc
 INPUT ./logosansfondimtatlantique.png
 INPUT ./logosansfondimtatlantique.png
-INPUT ./figures/pca-projection.pdf
-INPUT ./figures/pca-projection.pdf
 INPUT /Users/leo/Workspace/phdcybersec/slides_ares_2024/build/main.toc
 INPUT ./logosansfondimtatlantique.png
 INPUT ./logosansfondimtatlantique.png
